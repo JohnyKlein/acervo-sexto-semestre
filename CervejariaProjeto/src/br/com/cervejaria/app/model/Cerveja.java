@@ -1,5 +1,12 @@
 package br.com.cervejaria.app.model;
 
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Cerveja {
 
 	String nome; 
@@ -8,9 +15,12 @@ public class Cerveja {
 	Double volume;
 	Integer quantidade;
 	Double preco;
+	@XmlElementWrapper(name="criadores")
+	@XmlElement(name= "criador")
+	List<String> criadores;
 	
 	public Cerveja(String nome, String descricao, String unidadeDeMedida, Double volume, Integer quantidade,
-			Double preco) {
+			Double preco, List<String> criadores) {
 		super();
 		this.nome = nome;
 		this.descricao = descricao;
@@ -18,6 +28,7 @@ public class Cerveja {
 		this.volume = volume;
 		this.quantidade = quantidade;
 		this.preco = preco;
+		this.criadores = criadores;
 	}
 	public String getNome() {
 		return nome;
@@ -54,5 +65,11 @@ public class Cerveja {
 	}
 	public void setPreco(Double preco) {
 		this.preco = preco;
+	}
+	public List<String> getCriadores() {
+		return criadores;
+	}
+	public void setCriadores(List<String> criadores) {
+		this.criadores = criadores;
 	}
 }
