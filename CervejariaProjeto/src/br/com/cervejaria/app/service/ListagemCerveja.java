@@ -13,7 +13,7 @@ import br.com.cervejaria.app.model.Cerveja;
 public class ListagemCerveja {
 	
 	@WebResult(name="cerveja")
-	public List<Cerveja> listarLivro(){
+	public List<Cerveja> listarCerveja(){
 		CervejaDao cervejaDao = new CervejaDao();
 		return cervejaDao.getCervejas();
 	}
