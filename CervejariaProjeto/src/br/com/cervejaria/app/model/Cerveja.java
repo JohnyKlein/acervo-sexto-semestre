@@ -19,6 +19,10 @@ public class Cerveja {
 	@XmlElement(name= "criador")
 	List<String> criadores;
 	
+	public Cerveja() {
+		super();
+	}
+	
 	public Cerveja(String nome, String descricao, String unidadeDeMedida, Double volume, Integer quantidade,
 			Double preco, List<String> criadores) {
 		super();

@@ -22,4 +22,8 @@ public class CervejaDao {
 	public List<Cerveja> getCervejas() {
 		return cervejas;
 	}
+	
+	public void adiciona(Cerveja cerveja) {
+		cervejas.add(cerveja);
+	}
 }
