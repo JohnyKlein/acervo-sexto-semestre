@@ -20,7 +20,7 @@ public class Pedido {
 		this.produtos = produtos;
 	}
 	
-	public void setValorTotalPedido(Double valorTotalPedido) {
+	private void setValorTotalPedido(Double valorTotalPedido) {
 		this.valorTotalPedido = valorTotalPedido;
 	}
 	

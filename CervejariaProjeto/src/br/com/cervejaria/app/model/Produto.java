@@ -22,7 +22,7 @@ public class Produto {
 		this.valorUnit = valorUnit;
 	}
 
-	private void setValorTotal(Double valorTotal) {
+	public void setValorTotal(Double valorTotal) {
 		this.valorTotal = valorTotal;
 	}
 	
