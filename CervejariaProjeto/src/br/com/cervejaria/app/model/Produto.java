@@ -2,7 +2,6 @@ package br.com.cervejaria.app.model;
 
 public class Produto {
 	private String nome;
-	private Cliente cliente;
 	private Double valorUnit;
 	private Double valorTotal;
 	private Integer quantidade;
@@ -15,14 +14,6 @@ public class Produto {
 		this.nome = nome;
 	}
 	
-	public Cliente getCliente() {
-		return cliente;
-	}
-	
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-	
 	public Double getValorUnit() {
 		return valorUnit;
 	}
@@ -31,8 +22,12 @@ public class Produto {
 		this.valorUnit = valorUnit;
 	}
 
+	private void setValorTotal(Double valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+	
 	public Double getValorTotal() {
-		valorTotal = quantidade * valorUnit;
+		setValorTotal(quantidade * valorUnit);
 		 
 		return valorTotal;
 	}
