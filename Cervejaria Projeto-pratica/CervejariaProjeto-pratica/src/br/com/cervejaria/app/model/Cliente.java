@@ -4,6 +4,7 @@ public class Cliente {
 	private String nome;
 	private String telefone;
 	private String CNPJ;
+	private Usuario usuario;
 	
 	public String getNome() {
 		return nome;
@@ -23,6 +24,11 @@ public class Cliente {
 	public void setCNPJ(String CNPJ) {
 		this.CNPJ = CNPJ;
 	}
-	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	
 }
