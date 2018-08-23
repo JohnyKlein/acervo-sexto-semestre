@@ -5,6 +5,7 @@ public class Produto {
 	private Double valorUnit;
 	private Double valorTotal;
 	private Integer quantidade;
+	private Integer estoque;
 	
 	public String getNome() {
 		return nome;
@@ -39,4 +40,18 @@ public class Produto {
 	public void setQuantidade(Integer quantidade) {
 		this.quantidade = quantidade;
 	}
+
+	public Integer getEstoque() {
+		return estoque;
+	}
+
+	public void setEstoque(Integer estoque) {
+		this.estoque = estoque;
+	}
+	
+	public void updateEstoque() {
+		Integer estoque = this.estoque - quantidade;
+		setEstoque(estoque);
+	}
+	
 }

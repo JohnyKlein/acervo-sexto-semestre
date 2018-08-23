@@ -28,20 +28,26 @@ public class PedidoDao {
 		
 		Produto produto1 = new Produto();
 		produto1.setNome("Cerveja Pilsen");
+		produto1.setEstoque(1000);
 		produto1.setQuantidade(5);
 		produto1.setValorUnit(4.5);
+		produto1.updateEstoque();
 		produtos.add(produto1);
 		
 		Produto produto2 = new Produto();
 		produto2.setNome("Cerveja Bock");
 		produto2.setQuantidade(2);
+		produto2.setEstoque(200);
 		produto2.setValorUnit(10.0);
+		produto2.updateEstoque();
 		produtos.add(produto2);
 		
 		Produto produto3 = new Produto();
 		produto3.setNome("Cerveja Puro Malte");
+		produto3.setEstoque(50);
 		produto3.setQuantidade(18);
 		produto3.setValorUnit(20.0);
+		produto3.updateEstoque();
 		produtos.add(produto3);
 		
 		Pedido pedido1 = new Pedido();
