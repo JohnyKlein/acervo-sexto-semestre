@@ -1,10 +1,9 @@
 package br.com.cervejaria.app.model;
 
-public class Cliente {
+public class Cliente extends Usuario {
 	private String nome;
 	private String telefone;
 	private String CNPJ;
-	private Usuario usuario;
 	
 	public String getNome() {
 		return nome;
@@ -24,11 +23,4 @@ public class Cliente {
 	public void setCNPJ(String CNPJ) {
 		this.CNPJ = CNPJ;
 	}
-	public Usuario getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
-	
 }

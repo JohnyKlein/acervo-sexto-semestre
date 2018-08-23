@@ -10,25 +10,19 @@ public class PedidoDao {
 	private static List<Pedido> pedidos = new ArrayList<Pedido>();
 	
 	static {
-		Usuario user = new Usuario();
-		user.setLogin("user");
-		user.setSenha("senha");
-		
 		Cliente cliente1 = new Cliente();
 		cliente1.setNome("Johny Klein");
 		cliente1.setCNPJ("455563155");
 		cliente1.setTelefone("5555555555");
-		cliente1.setUsuario(user);
+		cliente1.setLogin("johny");
+		cliente1.setSenha("1234");
 		
-		Usuario user2 = new Usuario();
-		user2.setLogin("user2");
-		user2.setSenha("senha2");
-
 		Cliente cliente2 = new Cliente();
 		cliente2.setNome("Jana Girl");
 		cliente2.setCNPJ("115454555");
 		cliente2.setTelefone("99999999999");
-		cliente2.setUsuario(user2);
+		cliente2.setLogin("jana");
+		cliente2.setSenha("123465");
 		
 		List<Produto> produtos = new ArrayList<Produto>();
 		
