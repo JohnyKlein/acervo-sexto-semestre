@@ -29,7 +29,7 @@ public class ListagemCerveja {
 			CervejaDao cervejaDao = new CervejaDao();
 			cervejaDao.adiciona(cerveja);			
 		} else {
-			throw new UsuarioNaoAutorizadoException();
+			throw new UsuarioNaoAutorizadoException("Usurio nao autorizado!");
 		}
 		
 
