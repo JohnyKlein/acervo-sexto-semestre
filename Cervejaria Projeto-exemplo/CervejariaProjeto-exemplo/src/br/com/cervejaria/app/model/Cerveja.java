@@ -1,11 +1,15 @@
 package br.com.cervejaria.app.model;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import br.com.cervejaria.app.service.AdapterDate;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Cerveja {
@@ -19,6 +23,8 @@ public class Cerveja {
 	@XmlElementWrapper(name="criadores")
 	@XmlElement(name= "criador")
 	List<String> criadores;
+	@XmlJavaTypeAdapter(AdapterDate.class)
+	private Date dataDeCiracao = new Date();
 	
 	public Cerveja() {
 		super();
