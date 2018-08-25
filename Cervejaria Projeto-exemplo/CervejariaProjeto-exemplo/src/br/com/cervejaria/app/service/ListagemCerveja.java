@@ -20,7 +20,7 @@ public class ListagemCerveja {
 		return cervejaDao.getCervejas();
 	}
 
-	public void criarCerveja(
+	public void criarCerveja (
 			@WebParam(name="cerveja") Cerveja cerveja,
 			@WebParam(name="usuario", header=true) Usuario usuario)
 			throws UsuarioNaoAutorizadoException {
@@ -31,8 +31,6 @@ public class ListagemCerveja {
 		} else {
 			throw new UsuarioNaoAutorizadoException("Usurio nao autorizado!");
 		}
-		
-
 	}
 
 	public static void main(String[] args) {

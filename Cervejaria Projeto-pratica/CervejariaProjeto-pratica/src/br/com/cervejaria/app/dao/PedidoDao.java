@@ -62,4 +62,8 @@ public class PedidoDao {
 		return pedidos;
 	}
 	
+	public void adiciona(Pedido pedido) {
+		pedidos.add(pedido);
+	}
+	
 }

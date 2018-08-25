@@ -31,10 +31,8 @@ public class ListagemCerveja {
 		} else {
 			throw new UsuarioNaoAutorizadoException();
 		}
-		
-
 	}
-
+	
 	public static void main(String[] args) {
 		Endpoint.publish("http://localhost:8181/cervejas", new ListagemCerveja());
 		System.out.println("Servico Inicializado!");
