@@ -4,12 +4,14 @@ import java.util.List;
 
 import javax.jws.WebParam;
 import javax.jws.WebResult;
+import javax.jws.WebService;
 import javax.xml.ws.Endpoint;
 
 import br.com.cervejaria.app.dao.PedidoDao;
 import br.com.cervejaria.app.model.Pedido;
 import br.com.cervejaria.app.model.Usuario;
 
+@WebService
 public class ListagemPedido {
 
 	public void criarPedido(
@@ -17,7 +19,7 @@ public class ListagemPedido {
 			@WebParam(name="usuario", header=true) Usuario usuario)
 			throws UsuarioNaoAutorizadoException {
 		
-		if (usuario.getLogin().equals("cat") && usuario.getSenha().equals("cat")){
+		if (usuario.getLogin().equals("pedi") && usuario.getSenha().equals("pedi")){
 			PedidoDao pedidoDao = new PedidoDao();
 			pedidoDao.adiciona(pedido);			
 		} else {
@@ -32,7 +34,7 @@ public class ListagemPedido {
 	}
 
 	public static void main(String[] args) {
-		Endpoint.publish("http://localhost:8181/cervejas", new ListagemCerveja());
+		Endpoint.publish("http://localhost:8181/pedidos", new ListagemPedido());
 		System.out.println("Servico Inicializado!");
 	}
 	
