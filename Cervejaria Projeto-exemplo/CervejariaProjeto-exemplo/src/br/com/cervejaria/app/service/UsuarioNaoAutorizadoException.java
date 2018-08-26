@@ -4,8 +4,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.ws.WebFault;
 
-@WebFault(targetNamespace="http://service.app.cervejaria.com.br/excessoes/",
-		name="UsuarioNaoAutorizadoException")
+@WebFault(targetNamespace="http://service.app.cervejaria.com.br/excessoes/", name="UsuarioNaoAutorizadoException")
 public class UsuarioNaoAutorizadoException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
