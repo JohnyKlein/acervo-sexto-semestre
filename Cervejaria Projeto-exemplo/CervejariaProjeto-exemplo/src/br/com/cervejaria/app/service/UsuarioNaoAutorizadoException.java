@@ -8,6 +8,8 @@ import javax.xml.ws.WebFault;
 		name="UsuarioNaoAutorizadoException")
 public class UsuarioNaoAutorizadoException extends RuntimeException {
 
+	private static final long serialVersionUID = 1L;
+
 	public UsuarioNaoAutorizadoException() {
 		super();
 	}

@@ -9,7 +9,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Pedido {
 	private List<Produto> produtos = new ArrayList<Produto>();
-	private Cliente cliente;
 	private Double valorTotalPedido = 0D;
 	
 	public List<Produto> getProdutos() {
@@ -20,11 +19,8 @@ public class Pedido {
 		this.produtos = produtos;
 	}
 	
-	private void setValorTotalPedido(Double valorTotalPedido) {
-		this.valorTotalPedido = valorTotalPedido;
-	}
-	
 	public Double getValorTotalPedido() {
+		updateValorTotalPedido();
 		return valorTotalPedido;
 	}
 	
@@ -34,15 +30,6 @@ public class Pedido {
 			total += produto.getValorTotal();
 		}
 		
-		setValorTotalPedido(total);
+		this.valorTotalPedido = total;
 	}
-	
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-	
 }

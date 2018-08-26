@@ -52,7 +52,6 @@ public class PedidoDao {
 		
 		Pedido pedido1 = new Pedido();
 		pedido1.setProdutos(produtos);
-		pedido1.setCliente(cliente1);
 		pedido1.updateValorTotalPedido();
 		
 		pedidos.add(pedido1);
