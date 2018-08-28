@@ -7,10 +7,12 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import br.com.cervejaria.app.service.AdapterDate;
 
+@XmlSeeAlso({CervejaArtesanal.class})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Cerveja {
 
@@ -22,7 +24,7 @@ public class Cerveja {
 	Double preco;
 	@XmlElementWrapper(name="criadores")
 	@XmlElement(name= "criador")
-	List<String> criadores;
+	List<Criador> criadores;
 	@XmlJavaTypeAdapter(AdapterDate.class)
 	private Date dataDeCiracao = new Date();
 	
@@ -31,7 +33,7 @@ public class Cerveja {
 	}
 	
 	public Cerveja(String nome, String descricao, String unidadeDeMedida, Double volume, Integer quantidade,
-			Double preco, List<String> criadores) {
+			Double preco, List<Criador> criadores) {
 		super();
 		this.nome = nome;
 		this.descricao = descricao;
@@ -77,10 +79,10 @@ public class Cerveja {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
-	public List<String> getCriadores() {
+	public List<Criador> getCriadores() {
 		return criadores;
 	}
-	public void setCriadores(List<String> criadores) {
+	public void setCriadores(List<Criador> criadores) {
 		this.criadores = criadores;
 	}
 }
