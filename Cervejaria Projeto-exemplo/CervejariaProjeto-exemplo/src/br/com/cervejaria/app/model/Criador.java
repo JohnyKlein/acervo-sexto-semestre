@@ -2,9 +2,13 @@ package br.com.cervejaria.app.model;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlTransient;
+
 public class Criador {
 
 	private String nome;
+	
+	@XmlTransient	
 	private Date dataNascimento;
 	
 	public Criador() {

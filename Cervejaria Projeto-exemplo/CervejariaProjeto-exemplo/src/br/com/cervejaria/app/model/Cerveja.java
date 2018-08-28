@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import br.com.cervejaria.app.service.AdaptadorCriadores;
 import br.com.cervejaria.app.service.AdapterDate;
 
 @XmlSeeAlso({CervejaArtesanal.class})
@@ -24,6 +25,7 @@ public class Cerveja {
 	Double preco;
 	@XmlElementWrapper(name="criadores")
 	@XmlElement(name= "criador")
+	@XmlJavaTypeAdapter(value=AdaptadorCriadores.class)
 	List<Criador> criadores;
 	@XmlJavaTypeAdapter(AdapterDate.class)
 	private Date dataDeCiracao = new Date();
