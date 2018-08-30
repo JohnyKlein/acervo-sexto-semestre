@@ -1,11 +1,19 @@
 package br.com.cervejaria.app.model;
 
+import java.util.Date;
+
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import br.com.cervejaria.app.service.AdapterDate;
+
 public class Produto {
 	private String nome;
 	private Double valorUnit;
 	private Double valorTotal;
 	private Integer quantidade;
 	private Integer estoque;
+	@XmlJavaTypeAdapter(AdapterDate.class)
+	private Date dataDeCriacao = new Date();
 	
 	public String getNome() {
 		return nome;
