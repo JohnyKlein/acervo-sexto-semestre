@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Cerveja {
+public class Cerveja extends Produto {
 
 	String nome; 
 	String descricao;
@@ -24,17 +24,6 @@ public class Cerveja {
 		super();
 	}
 	
-	public Cerveja(String nome, String descricao, String unidadeDeMedida, Double volume, Integer quantidade,
-			Double preco, List<String> criadores) {
-		super();
-		this.nome = nome;
-		this.descricao = descricao;
-		this.unidadeDeMedida = unidadeDeMedida;
-		this.volume = volume;
-		this.quantidade = quantidade;
-		this.preco = preco;
-		this.criadores = criadores;
-	}
 	public String getNome() {
 		return nome;
 	}

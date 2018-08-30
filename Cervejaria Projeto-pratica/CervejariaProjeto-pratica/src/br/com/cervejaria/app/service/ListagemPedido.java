@@ -23,7 +23,7 @@ public class ListagemPedido {
 			PedidoDao pedidoDao = new PedidoDao();
 			pedidoDao.adiciona(pedido);			
 		} else {
-			throw new UsuarioNaoAutorizadoException();
+			throw new UsuarioNaoAutorizadoException("Usuario nao autorizado! Consulte o administrador.");
 		}
 	}
 	
