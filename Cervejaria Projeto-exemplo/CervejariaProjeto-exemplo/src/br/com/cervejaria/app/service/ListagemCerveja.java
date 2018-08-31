@@ -33,9 +33,9 @@ public class ListagemCerveja {
 		}
 	}
 
-	public static void main(String[] args) {
-		Endpoint.publish("http://localhost:8181/cervejas", new ListagemCerveja());
-		System.out.println("Servico Inicializado!");
-	}
+//	public static void main(String[] args) {
+//		Endpoint.publish("http://localhost:8181/cervejas", new ListagemCerveja());
+//		System.out.println("Servico Inicializado!");
+//	}
 
 }

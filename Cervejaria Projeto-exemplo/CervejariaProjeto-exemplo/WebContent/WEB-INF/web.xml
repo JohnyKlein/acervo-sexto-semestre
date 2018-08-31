@@ -1,0 +1,15 @@
+<sevelet>
+	<listener>
+		<listener-class>
+			com.sun.xml.ws.transport.http.servlet.WSServletContexListener
+		</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>jaxws</servlet-name>
+		<servlet-class>com.sum.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jaxws</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+</sevelet>
