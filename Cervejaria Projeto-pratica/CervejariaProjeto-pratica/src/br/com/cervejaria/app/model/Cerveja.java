@@ -9,7 +9,6 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Cerveja extends Produto {
-
 	String nome; 
 	String descricao;
 	String unidadeDeMedida;

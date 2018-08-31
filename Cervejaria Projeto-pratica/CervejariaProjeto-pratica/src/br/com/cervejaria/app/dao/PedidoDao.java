@@ -26,33 +26,33 @@ public class PedidoDao {
 		
 		List<Produto> produtos = new ArrayList<Produto>();
 		
-		Cerveja cerveja1 = new Cerveja();
+		Produto cerveja1 = new Produto();
 		cerveja1.setNome("Cerveja Pilsen");
 		cerveja1.setEstoque(1000);
 		cerveja1.setQuantidade(5);
 		cerveja1.setValorUnit(4.5);
-//		cerveja1.updateEstoque();
+		cerveja1.updateEstoque();
 		produtos.add(cerveja1);
 		
-		Cerveja cerveja2 = new Cerveja();
+		Produto cerveja2 = new Produto();
 		cerveja2.setNome("Cerveja Bock");
 		cerveja2.setQuantidade(2);
 		cerveja2.setEstoque(200);
 		cerveja2.setValorUnit(10.0);
-//		cerveja2.updateEstoque();
+		cerveja2.updateEstoque();
 		produtos.add(cerveja2);
 		
-		Cerveja cerveja3 = new Cerveja();
+		Produto cerveja3 = new Produto();
 		cerveja3.setNome("Cerveja Puro Malte");
 		cerveja3.setEstoque(50);
 		cerveja3.setQuantidade(18);
 		cerveja3.setValorUnit(20.0);
-//		cerveja3.updateEstoque();
+		cerveja3.updateEstoque();
 		produtos.add(cerveja3);
 		
 		Pedido pedido1 = new Pedido();
 		pedido1.setProdutos(produtos);
-//		pedido1.updateValorTotalPedido();
+		pedido1.updateValorTotalPedido();
 		
 		pedidos.add(pedido1);
 	}
