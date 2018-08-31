@@ -61,6 +61,10 @@ public class PedidoDao {
 		return pedidos;
 	}
 	
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+	
 	public void adiciona(Pedido pedido) {
 		pedidos.add(pedido);
 	}
