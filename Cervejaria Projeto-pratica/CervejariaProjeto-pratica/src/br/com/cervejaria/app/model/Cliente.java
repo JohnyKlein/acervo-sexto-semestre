@@ -3,6 +3,7 @@ package br.com.cervejaria.app.model;
 public class Cliente extends Usuario {
 	private String nome;
 	private String telefone;
+	private Long id;
 	
 	public String getNome() {
 		return nome;
@@ -15,5 +16,11 @@ public class Cliente extends Usuario {
 	}
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 }

@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 public class Pedido {
 	private List<Produto> produtos = new ArrayList<Produto>();
 	private Double valorTotalPedido = 0D;
+	private Cliente cliente;
 	
 	public List<Produto> getProdutos() {
 		return produtos;
@@ -31,5 +32,13 @@ public class Pedido {
 		}
 		
 		this.valorTotalPedido = total;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 }

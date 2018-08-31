@@ -61,8 +61,16 @@ public class PedidoDao {
 		return pedidos;
 	}
 	
-	public List<Pedido> getPedidos() {
-		return pedidos;
+	public List<Pedido> getPedidos(Long usuarioId) {
+		List<Pedido> pedidosCliente = new ArrayList<>();
+		
+		for(Pedido pedido : pedidos) {
+			if (pedido.getCliente().getId() == usuarioId) {
+				pedidosCliente.add(pedido);
+			}
+		}
+		
+		return pedidosCliente;
 	}
 	
 	public void adiciona(Pedido pedido) {
