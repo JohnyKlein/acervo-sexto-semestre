@@ -12,14 +12,14 @@ public class PedidoDao {
 	static {
 		Cliente cliente1 = new Cliente();
 		cliente1.setNome("Johny Klein");
-		cliente1.setCNPJ("455563155");
+//		cliente1.setCNPJ("455563155");
 		cliente1.setTelefone("5555555555");
 		cliente1.setLogin("johny");
 		cliente1.setSenha("1234");
 		
 		Cliente cliente2 = new Cliente();
 		cliente2.setNome("Jana Girl");
-		cliente2.setCNPJ("115454555");
+//		cliente2.setCNPJ("115454555");
 		cliente2.setTelefone("99999999999");
 		cliente2.setLogin("jana");
 		cliente2.setSenha("123465");
