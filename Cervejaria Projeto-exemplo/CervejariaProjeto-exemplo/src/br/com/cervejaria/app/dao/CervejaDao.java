@@ -11,7 +11,7 @@ import br.com.cervejaria.app.model.Criador;
 
 public class CervejaDao {
 
-	private static List<Cerveja> cervejas = new ArrayList<>(); 
+	private static List<Cerveja> cervejas = new ArrayList<Cerveja>(); 
 	
 	static {
 		CervejaArtesanal ceva1 = new CervejaArtesanal();
